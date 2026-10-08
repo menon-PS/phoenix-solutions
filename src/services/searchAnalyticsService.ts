@@ -22,7 +22,7 @@ export interface RealtimeSearchAnalytics {
 }
 
 export async function fetchRealtimeSearchAnalytics(
-  domain = 'phoenixsolutions.co',
+  domain = 'phoenix-solutions.in',
   query = 'Phoenix Solutions IT Strategy Content Marketing'
 ): Promise<RealtimeSearchAnalytics> {
   try {
