@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="chevron-top" x1="12" y1="28" x2="52" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d9963b" />
+      <stop offset="50%" stop-color="#f2b84b" />
+      <stop offset="100%" stop-color="#ffd97d" />
+    </linearGradient>
+    <linearGradient id="chevron-mid" x1="14" y1="42" x2="50" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#b8722c" />
+      <stop offset="55%" stop-color="#d9963b" />
+      <stop offset="100%" stop-color="#f2b84b" />
+    </linearGradient>
+    <linearGradient id="chevron-bot" x1="18" y1="56" x2="46" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8c5219" />
+      <stop offset="50%" stop-color="#b8722c" />
+      <stop offset="100%" stop-color="#d9963b" />
+    </linearGradient>
+  </defs>
+  <!-- Top Chevron: Strategy (#f2b84b) -->
+  <path d="M32 6L56 26L49 30L32 15.5L15 30L8 26L32 6Z" fill="url(#chevron-top)" />
+  <!-- Middle Chevron: People (#d9963b) -->
+  <path d="M32 21L52 38L45.5 41.5L32 30L18.5 41.5L12 38L32 21Z" fill="url(#chevron-mid)" />
+  <!-- Bottom Chevron: Technology (#b8722c) -->
+  <path d="M32 36L47 49L41 52.5L32 44.5L23 52.5L17 49L32 36Z" fill="url(#chevron-bot)" />
+</svg>

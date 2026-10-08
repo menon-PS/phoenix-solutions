@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Soft Warm Modern Executive Office Background (matching PK_2026.jpeg) -->
+    <linearGradient id="office-bg-pk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d2137" />
+      <stop offset="50%" stop-color="#143254" />
+      <stop offset="100%" stop-color="#0a1728" />
+    </linearGradient>
+    <radialGradient id="warm-bokeh-1" cx="20%" cy="25%" r="35%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0d2137" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="warm-bokeh-2" cx="80%" cy="30%" r="30%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0d2137" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="greenery-bokeh" cx="15%" cy="70%" r="25%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#0d2137" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Outer Decorative Rings -->
+    <linearGradient id="ring-border-pk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <!-- Attire Gradients: Navy Blue Blazer, Crisp White Open-Collar Shirt -->
+    <linearGradient id="navy-blazer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b2a4a" />
+      <stop offset="50%" stop-color="#14213d" />
+      <stop offset="100%" stop-color="#0e172a" />
+    </linearGradient>
+    <linearGradient id="blazer-lapel-pk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24375d" />
+      <stop offset="100%" stop-color="#111c33" />
+    </linearGradient>
+    <linearGradient id="white-shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <!-- Skin & Hair Gradients (matching PK_2026 photo) -->
+    <linearGradient id="skin-pk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d99b73" />
+      <stop offset="60%" stop-color="#c4835a" />
+      <stop offset="100%" stop-color="#ab6b43" />
+    </linearGradient>
+    <linearGradient id="skin-shadow-pk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#995832" />
+      <stop offset="100%" stop-color="#7c4220" />
+    </linearGradient>
+    <linearGradient id="hair-black-pk" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#26211e" />
+      <stop offset="100%" stop-color="#141110" />
+    </linearGradient>
+
+    <filter id="soft-shadow-pk" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="500" height="500" rx="28" fill="url(#office-bg-pk)"/>
+  <circle cx="100" cy="130" r="130" fill="url(#warm-bokeh-1)"/>
+  <circle cx="410" cy="140" r="120" fill="url(#warm-bokeh-2)"/>
+  <circle cx="80" cy="350" r="100" fill="url(#greenery-bokeh)"/>
+
+  <!-- Outer Ring Accent -->
+  <circle cx="250" cy="250" r="235" fill="none" stroke="url(#ring-border-pk)" stroke-width="3" opacity="0.7"/>
+  <circle cx="250" cy="250" r="228" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.12"/>
+
+  <!-- Character Group: Replicating PK_2026.jpeg Pose -->
+  <g id="pk-portrait" filter="url(#soft-shadow-pk)">
+    <!-- Navy Blue Suit Jacket (Tailored shoulders, open front) -->
+    <path d="M 85 500 L 115 355 C 135 240 180 205 250 205 C 320 205 365 240 385 355 L 415 500 Z" fill="url(#navy-blazer)"/>
+    
+    <!-- Crisp White Dress Shirt (Open Collar at Neckline - No Tie) -->
+    <path d="M 215 208 L 285 208 L 275 445 L 225 445 Z" fill="url(#white-shirt)"/>
+    <line x1="250" y1="240" x2="250" y2="445" stroke="#cbd5e1" stroke-width="2"/>
+    <circle cx="250" cy="275" r="2.5" fill="#94a3b8"/>
+    <circle cx="250" cy="325" r="2.5" fill="#94a3b8"/>
+    <circle cx="250" cy="375" r="2.5" fill="#94a3b8"/>
+
+    <!-- Open Shirt Collar Wings -->
+    <polygon points="215,208 242,245 228,248 208,218" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <polygon points="285,208 258,245 272,248 292,218" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- Navy Lapels (Notch Lapels) -->
+    <path d="M 170 230 L 226 340 L 220 445 L 140 365 Z" fill="url(#blazer-lapel-pk)"/>
+    <path d="M 330 230 L 274 340 L 280 445 L 360 365 Z" fill="url(#blazer-lapel-pk)"/>
+
+    <!-- Neck & Throat -->
+    <path d="M 225 160 L 275 160 L 278 225 C 278 238 222 238 222 225 Z" fill="url(#skin-pk)"/>
+    <path d="M 226 160 L 274 160 L 270 185 C 255 198 245 198 230 185 Z" fill="url(#skin-shadow-pk)" opacity="0.55"/>
+
+    <!-- Head / Face (Warm oval, friendly smile, identical to PK_2026.jpeg) -->
+    <path d="M 195 125 C 195 195 210 220 250 220 C 290 220 305 195 305 125 C 305 75 290 55 250 55 C 210 55 195 75 195 125 Z" fill="url(#skin-pk)"/>
+
+    <!-- Ears -->
+    <path d="M 190 120 C 186 110 185 145 194 145 Z" fill="#c4835a"/>
+    <path d="M 310 120 C 314 110 315 145 306 145 Z" fill="#c4835a"/>
+
+    <!-- Distinct Dark Hair (Textured spikes/volume on top matching PK photo) -->
+    <path d="M 190 110 C 185 68 208 38 250 38 C 292 38 315 68 310 110 C 302 82 285 62 250 62 C 215 62 198 82 190 110 Z" fill="#1f1a18"/>
+    <path d="M 192 90 Q 210 40 250 40 Q 290 40 308 90 Q 295 55 250 58 Q 205 55 192 90 Z" fill="#2d2623"/>
+
+    <!-- Eyebrows -->
+    <path d="M 212 110 C 222 106 234 108 238 112" stroke="#1f1a18" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <path d="M 288 110 C 278 106 266 108 262 112" stroke="#1f1a18" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Eyes (Warm, bright, expressive) -->
+    <ellipse cx="226" cy="120" rx="7" ry="5" fill="#ffffff"/>
+    <circle cx="226" cy="120" r="3.5" fill="#1f1610"/>
+    <circle cx="227" cy="119" r="1.2" fill="#ffffff"/>
+
+    <ellipse cx="274" cy="120" rx="7" ry="5" fill="#ffffff"/>
+    <circle cx="274" cy="120" r="3.5" fill="#1f1610"/>
+    <circle cx="275" cy="119" r="1.2" fill="#ffffff"/>
+
+    <!-- Iconic Thick Black Executive Eyeglasses (Replicating PK_2026.jpeg) -->
+    <!-- Left Lens Frame -->
+    <rect x="208" y="105" width="36" height="30" rx="8" fill="none" stroke="#12161f" stroke-width="4.5"/>
+    <!-- Right Lens Frame -->
+    <rect x="256" y="105" width="36" height="30" rx="8" fill="none" stroke="#12161f" stroke-width="4.5"/>
+    <!-- Bridge & Arms -->
+    <line x1="244" y1="116" x2="256" y2="116" stroke="#12161f" stroke-width="4"/>
+    <line x1="208" y1="116" x2="190" y2="118" stroke="#12161f" stroke-width="4"/>
+    <line x1="292" y1="116" x2="310" y2="118" stroke="#12161f" stroke-width="4"/>
+    <!-- Glass Glare Accent -->
+    <line x1="214" y1="109" x2="236" y2="109" stroke="#ffffff" stroke-width="1.5" opacity="0.6"/>
+    <line x1="262" y1="109" x2="284" y2="109" stroke="#ffffff" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Nose -->
+    <path d="M 250 115 L 246 142 Q 250 148 254 142 Z" fill="#c4835a" opacity="0.6"/>
+    <path d="M 242 143 Q 250 148 258 143" stroke="#8c502b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Neat Trimmed Dark Mustache (matching PK_2026.jpeg) -->
+    <path d="M 226 155 Q 250 150 274 155 Q 250 166 226 155 Z" fill="#1f1a18"/>
+
+    <!-- Warm Friendly Smile -->
+    <path d="M 232 168 Q 250 178 268 168" stroke="#68341b" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 236 168 Q 250 174 264 168" fill="#ffffff" opacity="0.9"/>
+  </g>
+
+  <!-- Executive Designation Badge at Base -->
+  <g transform="translate(60, 440)">
+    <rect width="380" height="46" rx="12" fill="#0d2137" fill-opacity="0.95" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="190" y="20" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="12" fill="#38bdf8" letter-spacing="2">PRAVEEN G. MENON (PK)</text>
+    <text x="190" y="36" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="9.5" fill="#e2e8f0" letter-spacing="1.5">FOUNDER &amp; MANAGING PARTNER</text>
+  </g>
+</svg>

@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --scroll-progress: 0;
+    --hero-progress: 0;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #011627;
+    scroll-behavior: smooth;
+    font-size: 17.5px; /* Extremely comfortable base font size for premium legibility across all age groups */
+    line-height: 1.68;
+    letter-spacing: 0.015em; /* Optical spacing compensation for enhanced legibility */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+  }
+
+  body {
+    color: #011627; /* Deep, rich near-black navy for maximum WCAG AAA contrast ratios */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+  }
+
+  /* Secure exclusion rules - disables copying, text-selection, and highlighting across all content tags */
+  *, #root {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -webkit-user-drag: none !important;
+  }
+
+  /* Explicitly re-allow typing selection inside form controls so visitors can fill forms & admins can log in */
+  input, textarea, select {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+  }
+
+  /* High-Fidelity Image Rendering & Copy Protection */
+  img {
+    filter: saturate(1.08) contrast(1.03) brightness(1.01);
+    image-rendering: -webkit-optimize-contrast;
+    transition: filter 250ms cubic-bezier(0.16, 1, 0.3, 1), transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none !important; /* completely blocks dragging, saving, or hovering image options */
+    -webkit-user-drag: none !important;
+    user-drag: none !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+.font-serif-display {
+  font-family: var(--font-serif);
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+/* Deep Navy-to-Aqua 3D metallic gradient text matching the PHOENIX SOLUTIONS logo wordmark */
+.text-gradient-phoenix {
+  background: linear-gradient(180deg, #00b4d8 0%, #0077b6 52%, #03396c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(3, 57, 108, 0.12));
+}
+
+/* Integrated & Transparent Card Style — completely card-free background so all text integrates directly on top of the emerging Phoenix and rising flames */
+.card-phoenix {
+  background: transparent;
+  border: 1px solid rgba(0, 150, 199, 0.18);
+  border-bottom: 3px solid rgba(3, 64, 120, 0.22);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-phoenix:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.48);
+  border-bottom-color: rgba(0, 119, 182, 0.55);
+  box-shadow: 0 10px 24px -10px rgba(0, 180, 216, 0.15);
+}
+
+/* 3D Tactile Primary CTA Button (Aqua-to-Deep-Navy matching Logo) */
+.btn-3d-primary {
+  background: linear-gradient(180deg, #00a8d6 0%, #0077b6 54%, #034078 100%);
+  color: #ffffff;
+  border: 1px solid #023e8a;
+  box-shadow:
+    0 6px 16px -3px rgba(0, 119, 182, 0.32),
+    0 2px 0 0 #022b4a,
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.38);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              filter 150ms ease;
+}
+
+.btn-3d-primary:hover {
+  transform: translateY(-1.5px);
+  filter: brightness(1.06);
+  box-shadow:
+    0 10px 22px -4px rgba(0, 119, 182, 0.4),
+    0 3px 0 0 #022b4a,
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.45);
+}
+
+.btn-3d-primary:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 3px 8px -2px rgba(0, 119, 182, 0.25),
+    0 1px 0 0 #022b4a,
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+}
+
+/* 3D Tactile Secondary White Button */
+.btn-3d-secondary {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f8fd 100%);
+  color: #042440;
+  border: 1px solid rgba(0, 119, 182, 0.32);
+  box-shadow:
+    0 6px 14px -3px rgba(4, 36, 64, 0.08),
+    0 2px 0 0 rgba(0, 119, 182, 0.22),
+    inset 0 1px 0 0 #ffffff;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 150ms ease,
+              color 150ms ease;
+}
+
+.btn-3d-secondary:hover {
+  transform: translateY(-1.5px);
+  border-color: rgba(0, 180, 216, 0.65);
+  color: #0077b6;
+  box-shadow:
+    0 10px 20px -4px rgba(0, 119, 182, 0.14),
+    0 3px 0 0 rgba(0, 119, 182, 0.32),
+    inset 0 1px 0 0 #ffffff;
+}
+
+/* 3D Porcelain Medallion Frame for Logo */
+.logo-frame-3d {
+  background: transparent;
+  border: 1px solid rgba(0, 150, 199, 0.28);
+  box-shadow:
+    0 10px 24px -6px rgba(4, 36, 64, 0.08),
+    0 3px 8px -2px rgba(0, 150, 199, 0.06);
+}
+
+/* Header & Footer translucent and integrated look */
+header, footer {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Compositor-safe animations for Blue Flames spreading & Phoenix emerging from ashes */
+@keyframes flameSpreadLeft {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1, 1) rotate(0deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate3d(-15px, -12px, 0) scale(1.05, 1.06) rotate(-1deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes flameSpreadRight {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1, 1) rotate(0deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate3d(15px, -12px, 0) scale(1.05, 1.06) rotate(1deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes phoenixAscendPulse {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.88;
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes ashToBlueFlameRise {
+  0% {
+    transform: translate3d(0, 24px, 0) scale(0.6, 1.2) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 0.85;
+    transform: translate3d(calc(var(--drift-x, 24px) * 0.5), -140px, 0) scale(0.8, 1.8) rotate(6deg);
+  }
+  75% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(var(--drift-x, 24px), -360px, 0) scale(0.3, 2.4) rotate(-8deg);
+    opacity: 0;
+  }
+}
+
+.animate-flame-left {
+  animation: flameSpreadLeft 7.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-flame-right {
+  animation: flameSpreadRight 8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-phoenix-ascend {
+  animation: phoenixAscendPulse 8.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-ash-ember {
+  animation: ashToBlueFlameRise var(--duration, 9s) cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform, opacity;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Phoenix Solutions",
+  "description": "Strategic consultancy architecting the rebirth of enterprise systems, human performance, and growth strategies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
