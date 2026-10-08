@@ -147,20 +147,8 @@ export const Header: React.FC<HeaderProps> = ({ reducedMotion }) => {
           ))}
         </nav>
 
-        {/* Zone 3: Direct Download PPTX & WhatsApp Round Icon Action & Mobile Hamburger Toggle */}
+        {/* Zone 3: WhatsApp Round Icon Action & Mobile Hamburger Toggle */}
         <div className="flex items-center gap-2.5">
-          <a
-            href="/api/download-pptx"
-            download="Phoenix_Solutions_90_Day_Growth_Plan.pptx"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#f0f7fe] text-[#0077b6] hover:bg-[#0077b6] hover:text-white border border-[#0077b6]/20 transition-all shadow-2xs cursor-pointer"
-            title="Download 30-60-90 Day Business Growth PowerPoint Presentation"
-          >
-            <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-            </svg>
-            <span>PPTX Plan</span>
-          </a>
-
           <a
             href="https://wa.me/918179093087?text=Hello%20Phoenix%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20strategic%20project."
             target="_blank"
